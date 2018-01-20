@@ -16,18 +16,20 @@
 
   <ion-item>
     <ion-label>Nome</ion-label>
-    <ion-input placeholder="Notebook Dell"></ion-input>
+    <ion-input [(ngModel)]="item.nome" placeholder="Notebook Dell"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Quantidade</ion-label>
-    <ion-input type="number" min="1" placeholder="1"></ion-input>
+    <ion-input [(ngModel)]="item.quantidade" type="number" min="1" placeholder="1"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Preço</ion-label>
-    <ion-input type="number" min="0" placeholder="2400"></ion-input>
+    <ion-input [(ngModel)]="item.preco" type="number" min="0" placeholder="2400"></ion-input>
   </ion-item>
+
+  {{item | json}}
 
   <button ion-button block clear>Adicionar</button>
 </ion-content>
