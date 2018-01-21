@@ -10,6 +10,7 @@ import {AngularFireModule} from "angularfire2";
 import {FIREBASE_CONFIG} from "./firebase.credentials";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {AddShoppingItemPage} from "../pages/add-shopping-item/add-shopping-item";
+import {ShoppingListService} from "../services/shopping-list/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {AddShoppingItemPage} from "../pages/add-shopping-item/add-shopping-item"
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ShoppingListService
   ]
 })
 export class AppModule {}

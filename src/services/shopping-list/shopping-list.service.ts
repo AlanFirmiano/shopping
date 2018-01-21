@@ -12,4 +12,9 @@ export class ShoppingListService{
   getShoppingList(){
     return this.shoppingListRef;
   }
+
+  addItem(item: Item){
+    return this.shoppingListRef.push(item);
+  }
+
 }
