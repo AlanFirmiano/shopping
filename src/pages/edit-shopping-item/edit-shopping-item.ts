@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Item} from "../../models/item/item.module";
 
 /**
  * Generated class for the EditShoppingItemPage page.
@@ -14,12 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'edit-shopping-item.html',
 })
 export class EditShoppingItemPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  item: Item;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams
+  ) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EditShoppingItemPage');
+  ionViewWillLoad() {
+    this.item = this.navParams.get('item');
   }
 
+  saveItem(){
+
+  }
 }

@@ -10,6 +10,7 @@ import {AngularFireModule} from "angularfire2";
 import {FIREBASE_CONFIG} from "./firebase.credentials";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {AddShoppingItemPage} from "../pages/add-shopping-item/add-shopping-item";
+import {EditShoppingItemPageModule } from "../pages/edit-shopping-item/edit-shopping-item.module";
 import {ShoppingListService} from "../services/shopping-list/shopping-list.service";
 
 @NgModule({

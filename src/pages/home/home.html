@@ -14,7 +14,7 @@
 <ion-content padding>
   <ion-list>
     <ion-list-header>Itens</ion-list-header>
-    <ion-item *ngFor="let item of shoppingList$ | async">
+    <ion-item *ngFor="let item of shoppingList$ | async" detail-push navPush="EditShoppingItemPage" [navParams]="{item:item}">
       {{item.nome}}
     </ion-item>
   </ion-list>
