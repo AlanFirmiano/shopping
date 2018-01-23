@@ -27,8 +27,15 @@ export class EditShoppingItemPage {
   saveItem(item: Item){
     this.shopping.editItem(item)
       .then(()=>{
-        this.toast.show(`${item.nome} salvo`);
+        this.toast.show(`${item.nome} salvo!`);
         this.navCtrl.setRoot('HomePage');
       });
+  }
+
+  removeItem(item:Item){
+    this.shopping.removeItem(item).then(()=>{
+      this.toast.show(`${item.nome} removido!`);
+      this.navCtrl.setRoot('HomePage');
+    });
   }
 }
