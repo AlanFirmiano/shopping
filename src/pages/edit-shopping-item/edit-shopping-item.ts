@@ -2,13 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Item} from "../../models/item/item.module";
 import {ShoppingListService} from "../../services/shopping-list/shopping-list.service";
+import {ToastService} from "../../services/toast/toast.service";
 
-/**
- * Generated class for the EditShoppingItemPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -20,7 +15,8 @@ export class EditShoppingItemPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private shopping: ShoppingListService
+    private shopping: ShoppingListService,
+    private toast: ToastService
   ) {
   }
 
@@ -31,6 +27,7 @@ export class EditShoppingItemPage {
   saveItem(item: Item){
     this.shopping.editItem(item)
       .then(()=>{
+        this.toast.show(`${item.nome} salvo`);
         this.navCtrl.setRoot('HomePage');
       });
   }

@@ -12,6 +12,7 @@ import {AngularFireDatabaseModule} from "angularfire2/database";
 import {AddShoppingItemPage} from "../pages/add-shopping-item/add-shopping-item";
 import {EditShoppingItemPageModule } from "../pages/edit-shopping-item/edit-shopping-item.module";
 import {ShoppingListService} from "../services/shopping-list/shopping-list.service";
+import {ToastService} from "../services/toast/toast.service";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {ShoppingListService} from "../services/shopping-list/shopping-list.servi
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ShoppingListService
+    ShoppingListService,
+    ToastService
   ]
 })
 export class AppModule {}
