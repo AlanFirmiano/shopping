@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "206866460658",
+    "firebase_url": "https://appnotification-ebcfa.firebaseio.com",
+    "project_id": "appnotification-ebcfa",
+    "storage_bucket": "appnotification-ebcfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206866460658:android:e696b364ae9bffa0",
+        "android_client_info": {
+          "package_name": "com.aln.push"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206866460658-098r9jei950eeloa6horo66d0pegthaf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0ihRb6KgRrH26PLVvgKc__cJYLu3pK_U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
